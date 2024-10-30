@@ -1,0 +1,86 @@
+.language{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &.active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_block{
+        position: absolute;
+        background-color: #fff;
+        padding: 50px 100px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile{
+            padding: 20px 50px;
+        }
+
+        &_close{
+            position: relative;
+            top: -110px;
+            left: 165px;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 100%;
+            @include flex-center;
+            cursor: pointer;
+            svg{
+                width: 30%;
+                path{
+                    fill: rgba(157, 156, 156, 1);
+                }
+            }
+
+            @include mobile{
+                top: -80px;
+                left: 120px;
+            }
+        }
+
+        &_select{
+            margin-top: -60px;
+            width: 150%;
+            
+            h2{
+                text-align: center;
+                @include font(20px, 28px, 600);
+            }
+
+            &_dropdown {
+                width: 100%;
+                margin-top: 10px;
+        
+                select {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 50px;
+                    border: 1px solid #ccc;
+                    background-color: #fff;
+                    cursor: pointer;
+                    font-size: 16px;
+                    outline: none;
+                }
+            }
+        }
+
+        @include mobile{
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+    }
+    
+}

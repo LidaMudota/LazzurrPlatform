@@ -1,0 +1,134 @@
+.contact{
+    padding-top: 10%;
+    &.contactPage{
+        padding-top: 4%;
+        .contact_content{
+            box-shadow: 0px 10px 36px 33px rgba(207, 238, 255, .3);
+        }
+    }
+
+    &_content{
+        display: flex;
+        padding-left: 1%;
+        border-radius: 5%;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(207, 238, 255, 0.3);
+        box-shadow: 0px 90px 36px 33px rgba(207, 238, 255, .3);
+        
+        @include mobile{
+            flex-direction: column;
+        }
+
+        &_info{
+            &_title{
+                font-family: 'PTSans';
+                @include font(45px, 65px);
+                text-transform: uppercase;
+                margin-bottom: 5%;
+            }
+
+            &_location{
+                width: 70%;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                @include tablet{
+                    width: 90%;
+                }
+
+                @include mobile{
+                    width: 100%;
+                }
+    
+                &_info{
+                    margin-left: 5%;
+                    margin-right: 8%;
+                    @include font(14px, 19px, 300);
+    
+                    &_underlined{
+                        color: #2e4c7f;
+                        text-decoration: underline;
+                    }
+
+                    &_title{
+                        @include font(14px, 19px, 300);
+                        color: #3c3d3f;
+                        margin-bottom: 2%;
+                    }
+                }
+                
+                .arrow{
+                    padding: 10px;
+                    border-radius: 100%;
+                    background-color: #fff;
+                    @include flex-center;
+
+                    svg{
+                        width: 15px;
+                        height: 15px;
+                        path{
+                            fill: #2e4c7f;
+                        }
+                    }
+                }
+            }
+
+            &_item{
+                margin-top: 5%;
+                width: 70%;
+                display: flex;
+                align-items: center;
+
+                @include tablet{
+                    width: 90%;
+                }
+
+                @include mobile{
+                    width: 100%;
+                }
+    
+                &_descr{
+                    margin-left: 5%;
+                    margin-right: 8%;
+                    @include font(14px, 19px, 300);
+    
+                    &_title{
+                        @include font(14px, 19px, 300);
+                        color: #3c3d3f;
+                        margin-bottom: 2%;
+                    }
+
+                    &_text{
+                        text-decoration: none;
+                        color: #000;
+                        @include font(16px, 22px, 600);
+                    }
+                }
+                
+                
+            }
+        }
+
+        &_info{
+            width: 45%;
+
+            @include mobile{
+                width: 90%;
+            }
+        }
+
+        &_map{
+            width: 45%;
+
+            @include mobile{
+                width: 90%;
+            }
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

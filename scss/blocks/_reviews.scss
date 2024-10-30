@@ -1,0 +1,198 @@
+.reviews{
+    padding-top: 10%;
+
+    &_title{
+        font-family: 'PTSans';
+        @include font(54px, 75px);
+        text-transform: uppercase;
+        text-align: center;
+
+        @include tablet{
+            @include font(40px, 55px);
+        }
+
+        @include mobile{
+            @include font(26px, 36px);
+        }
+    }
+
+    &_slider{
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        &_content{
+            margin-top: 4%;
+            margin-left: -2%;
+            width: 100%;
+            display: flex;
+            gap: 2.7%;
+            transform: translateX(0%);
+            transition: all linear 0.5s;
+            @include mobile{
+                gap: 0;
+            }
+    
+            &_item{
+                flex: 0 0 23%;
+                padding: 1.5%;
+                background-color: #f3f3f3;
+
+                @include mobile{
+                    flex: 0 0 100%;
+                }
+    
+                &_header{
+                    display: flex;
+                    align-items: center;
+    
+                    img{
+                        width: 25%;
+                    }
+    
+                    &_info{
+                        &_name{
+                            @include font(16px, 20px, 600);
+    
+                                img{
+                                    width: 12%;
+                                    margin-bottom: -2%;
+                                }
+                        }
+    
+                        &_date{
+                            font-size: 14px;
+                            color: #b0b0b0;
+                        }
+                    }
+                }
+    
+                &_body{
+                    margin-top: 3%;
+    
+                    p{
+                        @include font(18px, 24px);
+
+                        @include tablet{
+                            @include font(14px, 18px);
+                        }
+
+                        @include mobile{
+                            @include font(18px, 24px);
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        button{
+            background-color: rgba(0, 0, 0, 0.3);
+            border: none;
+            padding: 1%;
+            position: relative;
+            border-radius: 100%;
+            color: #fff;
+            cursor: pointer;
+            z-index: 100;
+            font-size: 16px;
+        }
+        &_nextBtn{
+            left: -5%;
+            @include mobile{
+                right: 8%;
+            }
+        }
+
+        &_prevBtn{
+            left: 0;
+        }
+
+
+    }
+
+    &_bottom{
+        margin-top: 4%;
+        display: flex;
+        gap: 2%;
+        background-color: #fafafa;
+
+        @include mobile{
+            margin-top: 10%;
+        }
+
+        &_body{
+            &_rev{
+                display: flex;
+                @include font(16px, 24px);
+                .text{
+                    @include mobile{
+                        order: 1;
+                        margin-left: -45px;
+                    }
+                }
+
+                .stars{
+                    @include mobile{
+                        order: 0;
+                        margin-top: -20px;
+                        margin-left: -80px;
+                    }
+                }
+            }
+
+            &_date{
+                display: flex;
+                justify-content: space-between;
+                p{
+                    @include font(16px, 24px);
+                    color: #42a5f5;
+                    img{
+                        width: 16px;
+                        margin-right: 5px;
+                        margin-bottom: -4px;
+                    }
+                }
+            }
+
+            &_response{
+                border-left: 1px solid #000;
+                border-radius: 10px;
+                margin-top: 2%;
+                padding: 2% 3%;
+                font-size: 16px;
+                background-color: #f5f5f5;
+
+                .author{
+                    font-size: 14px;
+                    margin-bottom: 1.5%;
+                }
+            }
+        }
+    }
+
+    &_controls{
+        margin-top: 2%;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        &_item{
+            width: 14px;
+            height: 14px;
+            background: #D3D3D3;
+            border-radius: 100%;
+            &.active{
+                background-color: #000;
+            }
+
+            &.mob{
+                display: none;
+                @include mobile{
+                    display: flex;
+                }
+            }
+        }
+    }
+    
+}

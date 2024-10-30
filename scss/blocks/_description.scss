@@ -1,0 +1,35 @@
+.description{
+    margin-top: 5%;
+    text-align: center;
+
+    &_content{
+        &_title{
+            @include font(27px, 40px);
+            text-transform: uppercase;
+        }
+
+        &_text{
+            @include font(16px, 22px, 300);
+            &_hidden{
+                opacity: 0.1;
+            }
+        }
+
+        &_btn{
+            margin-top: 0%;
+            background-color: #fff;
+            opacity: 1;
+            button{
+                @include font(16px, 22px);
+                margin-top: 0;
+                background-color: #fff !important;
+                padding: 1.5% 5%;
+                border-radius: 30px;
+                color: #2E4C7F;
+                border: 1px solid #2E4C7F;
+                cursor: pointer;
+            }
+            
+        }
+    }
+}

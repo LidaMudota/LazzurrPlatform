@@ -1,0 +1,67 @@
+.services{
+    padding-top: 7%;
+
+    &_content{
+        display: flex;
+        justify-content: start;
+        gap: 2%;
+        flex-wrap: wrap;
+
+        &_item{
+            width: 32%;
+            padding: 16% 1% 1% 1%;
+            border-radius: 32px;
+            margin-bottom: 1%;
+
+            @include mobile{
+                width: 49%;
+                display: flex;
+                justify-content: center;
+            }
+
+            &_button{
+                width: 95%;
+                @include font(20px, 26px, 700);
+                margin-left: 2%;
+                
+
+                @include mobile{
+                    @include font(10px, 14px, 700);
+                }
+
+                span{
+                    padding: 5% 7%;
+                    rotate: -35deg;
+                }
+            }
+
+            &.item1{
+                background: url('../img/item1.png') center ( center / cover ) no-repeat;
+            }
+            
+            &.item2{
+                background: url('../img/item2.png') center ( center / cover ) no-repeat;
+            }
+
+            &.item3{
+                background: url('../img/item3.png') center ( center / cover ) no-repeat;
+            }
+
+            &.item4{
+                background: url('../img/item4.png') center ( center / cover ) no-repeat;
+            }
+
+            &.item5{
+                background: url('../img/item5.png') center ( center / cover ) no-repeat;
+            }
+
+            &.item6{
+                background: url('../img/item6.png') center ( center / cover ) no-repeat;
+            }
+
+            &.item7{
+                background: url('../img/item7.png') center ( center / cover ) no-repeat;
+            }
+        }
+    }
+}

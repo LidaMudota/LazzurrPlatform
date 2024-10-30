@@ -1,0 +1,37 @@
+.command{
+    padding-top: 5%;
+    &_content{
+        background: linear-gradient(rgba(207, 238, 255, .3));
+        box-shadow: 0px 10px 36px 33px rgba(207, 238, 255, .3);
+    
+        &_info{
+            display: flex;
+            justify-content: space-between;
+            gap: 4%;
+            @include mobile{
+                flex-direction: column;
+            }
+
+            &_title{
+                font-family: 'PTSans';
+                @include font(50px, 70px);
+                text-transform: uppercase;
+            }
+
+            &_descr{
+                @include font(16px, 20px, 300);
+                p{
+                    margin-bottom: 2%;
+                }
+            }
+        }
+
+        &_img{
+            margin-top: 2%;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

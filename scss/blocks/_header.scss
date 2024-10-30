@@ -1,0 +1,174 @@
+.header{
+    width: 100%;
+    padding-top: 16px;
+
+    &_wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile{
+            flex-wrap: wrap;
+        }
+
+        &_logo{
+            margin-right: 1vw;
+            img{
+                width: 6vw;
+                min-width: 40px;
+                max-width: 80px;
+            }
+
+            @include mobile{
+                order: 0;
+            }
+        }
+
+        &_location{
+            max-width: 24%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &_info{
+                margin-left: 2%;
+                margin-right: 4%;
+                @include font(14px, 19px, 300);
+
+                @include mobile{
+                    margin-right: 30%;
+                }
+
+                &_underlined{
+                    color: #2e4c7f;
+                    text-decoration: underline;
+                }
+            }
+
+            @include mobile{
+                order: 4;
+                scale: 0;
+                transition: all linear 0.5s;
+                height: 0;
+                max-width: 100%;
+                margin-top: 10%;
+
+                &.active{
+                    scale: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &_nav{
+            margin-left: 7%;
+            @include tablet{
+                margin-left: 3%;
+            }
+            &_list{
+                display: flex;
+                @include mobile{
+                    flex-direction: column;
+                }
+                gap: 3vw;
+                &_item{
+                    @include tablet{
+                        gap: 2vw;
+                    }
+                    @include mobile{
+                        margin-top: 10%;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+            }
+
+            @include mobile{
+                order: 3;
+                scale: 0;
+                transition: all linear 0.5s;
+                height: 0;
+                margin-left: 0;
+                width: 100%;
+
+                &.active{
+                    scale: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        &_language{
+            margin-left: 7%;
+            @include font(14px, 17px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            @include tablet{
+                margin-left: 3%;
+            }
+
+            @include mobile{
+                margin-left: 34%;
+            }
+
+            &_arrDown{
+                background-color: rgba(46, 76, 127, 0.15);
+                padding: 8px;
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                @include flex-center;
+                cursor: pointer;
+
+                svg{
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            @include mobile{
+                order: 1;
+            }
+        }
+
+        &_toggle{
+            display: none;
+            background: none;
+            border: none;
+            padding: 0;
+
+            &_close{
+                scale: 0;
+                height: 0;
+                transition: all linear 0.5s;
+                path{
+                    width: 80%;
+                }
+
+                &.active{
+                    scale: 80%;
+                    margin-top: -40%;
+                    height: auto;
+                }
+            }
+
+            &_button{
+                scale: 100%;
+                transition: all linear 0.5s;
+
+                &.active{
+                    scale: 0;
+                    height: 0;
+                }
+            }
+
+            @include mobile{
+                display: block;
+                order: 2;
+            }
+        }
+    }
+}

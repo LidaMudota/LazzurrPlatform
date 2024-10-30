@@ -1,0 +1,115 @@
+.banner{
+    padding-top: 16px;
+
+    &_content{    
+        overflow: hidden;
+        
+        .carousel{
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(0%);
+
+            &_slide {
+                min-width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: linear-gradient(to right, #f8dcdc, #e2e3f3);
+                padding: 3%;
+                border-radius: 20px;
+    
+                &_content {
+                    flex: 1;
+                    margin-right: 20px;
+    
+                    h1 {
+                        font-family: 'PTSans';
+                        @include font(47px, 75.6px);
+                        margin-bottom: 50px;
+                        text-transform: uppercase;
+
+                        @include tablet{
+                            @include font(35px, 45px);
+                            margin-bottom: 24px;
+                        }
+
+                        @include mobile{
+                            @include font(18px, 25px);
+                        }
+                    }
+    
+                    &_descr{
+                        @include font(16px, 22.4px, 300);
+                        margin-bottom: 56px;
+
+                        @include tablet{
+                            @include font(14px, 20px);
+                            margin-bottom: 20px;
+                        }
+
+                        @include mobile{
+                            display: none;
+                        }
+                        
+                        span{
+                            font-weight: 500;
+                            font-style: bold;
+                            line-height: 20px;
+                        }
+                    }
+
+                    &_text{
+                        margin-top: 16px;
+                        @include font(14px, 19.6px, 300);
+                        @include mobile{
+                            width: 150%;
+                        }
+                    }
+
+                    &_button{
+                        @include mobile{
+                            width: 100%;
+                            padding: 8%;
+                        }
+                        span{
+                            @include mobile{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &_image{
+                    width: 45%;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .lines-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+
+        .line {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            border-radius: 10px;
+            background-color: rgba(248, 129, 219, 1);
+            display: inline-block;
+            cursor: pointer;
+            transition: width 0.6s ease;
+
+            &.active{
+                background-color: rgba(248, 129, 219, 1);
+                width: 40px;  /* Active slide line is longer */
+            }
+        }
+    }
+}

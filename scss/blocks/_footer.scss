@@ -1,0 +1,86 @@
+.footer{
+    border-top: 1px solid #f3f3f3;
+    margin-top: 10%;
+    padding-top: 2%;
+
+    &_content{
+        &_list{
+            display: flex;
+            justify-content: space-between;
+            gap: 2%;
+            @include mobile{
+                flex-wrap: wrap;
+            }
+            &_item{
+                &_innerList{
+                    &_title{
+                        @include font(20px, 28px, 600);
+                        margin-bottom: 30px;
+                    }
+
+                    &_item{
+                        margin-bottom: 20px;
+                        a{
+                            text-decoration: none;
+                            @include font(14px, 17px);
+                            color: #000;
+                            display: flex;
+                            align-items: center;
+
+                            svg{
+                                width: 24px;
+                                height: 24px;
+                                margin-right: 5px;
+                            }
+                        }
+
+                        &_location{
+                            width: 80%;
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                
+                            &_info{
+                                margin-right: 10%;
+                                @include font(14px, 19px, 300);
+                
+                                &_underlined{
+                                    color: #2e4c7f;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                &:nth-child(1){
+                    @include mobile{
+                        width: 100%;
+                        order: 0;
+                    }
+                }
+
+                &:nth-child(2){
+                    @include mobile{
+                        width: 45%;
+                        order: 1;
+                    }
+                }
+
+                &:nth-child(3){
+                    @include mobile{
+                        width: 100%;
+                        order: 3;
+                    }
+                }
+
+                &:nth-child(4){
+                    @include mobile{
+                        width: 45%;
+                        order: 2;
+                    }
+                }
+            }
+        }
+    }
+}

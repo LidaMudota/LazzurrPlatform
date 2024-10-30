@@ -1,0 +1,110 @@
+.city{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &.active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_block{
+        position: absolute;
+        background-color: #fff;
+        padding: 80px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile{
+            padding: 40px;
+            text-align: center;
+        }
+
+        &_close{
+            position: relative;
+            top: -150px;
+            left: 55%;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 100%;
+            @include flex-center;
+            cursor: pointer;
+            svg{
+                width: 30%;
+                path{
+                    fill: rgba(157, 156, 156, 1);
+                }
+            }
+
+            @include tablet{
+                top: -110px;
+                left: 50%;
+                width: 40px;
+                height: 40px;
+            }
+
+            @include mobile{
+                top: -90px;
+                left: 140px;
+            }
+        }
+
+        &_text{
+            margin-top: -50px;
+            @include font(20px, 28px, 600);
+            width: 80%;
+            text-align: center;
+            &_city{
+                color: #2e4c7f;
+                text-decoration: underline;
+            }
+        }
+
+        &_address{
+            @include font(20px, 28px, 400);
+            margin-bottom: 32px;
+        }
+
+        &_select{
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 24px;
+
+            p{
+                text-align: center;
+                @include font(16px, 22.4px);
+            }
+
+            &_dropdown {
+                width: 100%;
+                margin-top: 10px;
+        
+                select {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 50px;
+                    border: 1px solid #ccc;
+                    background-color: #fff;
+                    cursor: pointer;
+                    font-size: 16px;
+                    outline: none;
+                }
+            }
+        }
+
+        @include mobile{
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+    }
+    
+}

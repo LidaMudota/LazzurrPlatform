@@ -1,0 +1,131 @@
+.options{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &.active{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_close{
+        position: absolute;
+        top: 8%;
+        right: 7%;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 100%;
+        @include flex-center;
+        cursor: pointer;
+        svg{
+            width: 30%;
+            path{
+                fill: rgba(157, 156, 156, 1);
+            }
+        }
+    }
+
+    &_block{
+        position: absolute;
+        background-color: #fff;
+        padding: 3%;
+        width: 80%;
+        height: 60%;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+
+        @include mobile{
+            padding: 2%;
+            flex-direction: column;
+            height: 70%;
+        }
+
+        
+        @include mobile{
+            margin-right: 2%;
+            margin-left: 2%;
+        }
+
+        &_categories{
+            flex-grow: 1;
+            &_item{
+                @include font(20px, 28px, 600);
+                padding: 15px 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 8px;
+                transition: background-color 0.3s ease;
+
+                .arrow{
+                    width: 36px;
+                    height: 36px;
+                    background-color: #E0E4EC;
+                    border-radius: 100%;
+                    @include flex-center;
+                }
+
+                &.active{
+                    color: #2E4C7F;
+
+                    .arrow{
+                        background-color: #2E4C7F;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+
+        &_details{
+            flex-grow: 1;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            scrollbar-color: #1a3c81 #f4f4f4;
+            display: none;
+
+            &.active{
+                display: block;
+            }
+
+            &_item{
+                display: flex;
+                justify-content: space-between;
+                padding: 17px 0;
+
+                &_info{
+                    &_title{
+                        @include font(16px, 22.4px, 600);
+                    }
+                    &_price{
+                        @include font(14px, 20px);
+                    }
+                }
+
+                &_button{
+                    background: none;
+                    border: 1px solid #2E4C7F;
+                    border-radius: 40px;
+                    width: 30%;
+                    color: #2E4C7F;
+                    cursor: pointer;
+
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+    
+}
